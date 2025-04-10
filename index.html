@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <section id="songlist"></section>
+        <div id="sub">
+            <div class="song-info">
+                <img id="song-img"  src="images.jpeg" alt="" />
+                <span id="songname">Why-this-kolaveri-di.mp3</span>
+            </div>
+
+            <div class="controls">
+                <div class="time">
+                    <span id="current-time">00:00</span>
+                    <span id="total-time">05:00</span>
+                </div>
+                <input type="range" id="progress-bar" value="0" step="0.1"  />
+            </div>
+
+            <div id="playcontrols">
+                <button id="prev-btn" class="previous"><i class="fa-solid fa-backward"></i></button>
+                <button onclick="togglefunction()" id="play-btn"><i class="fa-solid fa-play" id="play-icon"></i></button>
+                <button id="next-btn" class="next"><i class="fa-solid fa-forward"></i></button>
+                <button class="shuffle"><i class="fa-solid fa-shuffle"></i></button>
+            </div>
+
+            <audio id="audio" src="Why-this-kolaveri-di.mp3"></audio>
+            <span>Volume control</span>
+            <input type="range" id="volume" oninput="volumehandle()">
+        </div>
+    </div>
+
+    <script src="sample.js"></script>
+</body>
+
+</html>
